@@ -341,13 +341,14 @@ Here is the caller graph for this function:</div>
 <p class="definition">Definition at line <a class="el" href="menu__handler_8cpp_source.html#l00117">117</a> of file <a class="el" href="menu__handler_8cpp_source.html">menu_handler.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">  120</span>{</div>
 <div class="line"><span class="lineno">  121</span>    <span class="comment">// Define absolute script folder</span></div>
-<div class="line"><span class="lineno">  122</span>    std::filesystem::path full_folder = absolute_path / folder;</div>
+<div class="line"><span class="lineno">  122</span>    std::filesystem::path full_folder = <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> / folder;</div>
 <div class="line"><span class="lineno">  123</span> </div>
 <div class="line"><span class="lineno">  124</span>    <span class="comment">// Define full script name</span></div>
 <div class="line"><span class="lineno">  125</span>    std::filesystem::path full_name = full_folder / relative_filename;</div>
 <div class="line"><span class="lineno">  126</span> </div>
 <div class="line"><span class="lineno">  127</span>    <span class="keywordflow">return</span> full_name.string();</div>
 <div class="line"><span class="lineno">  128</span>}</div>
+<div class="ttc" id="anamespaceports__read_html_ae1b9b8d97281f3866a7c3a7f56806c4d"><div class="ttname"><a href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">ports_read.absolute_path</a></div><div class="ttdeci">absolute_path</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00026">ports_read.py:26</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -396,7 +397,7 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   65</span>    std::vector&lt;std::string&gt; ports_vec;</div>
 <div class="line"><span class="lineno">   66</span> </div>
 <div class="line"><span class="lineno">   67</span>    <span class="comment">// Get absolute file path</span></div>
-<div class="line"><span class="lineno">   68</span>    std::filesystem::path absolute_path = std::filesystem::current_path();</div>
+<div class="line"><span class="lineno">   68</span>    std::filesystem::path <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> = std::filesystem::current_path();</div>
 <div class="line"><span class="lineno">   69</span> </div>
 <div class="line"><span class="lineno">   70</span>    <span class="comment">// Define include relative folder</span></div>
 <div class="line"><span class="lineno">   71</span>    std::filesystem::path include_folder(<span class="stringliteral">&quot;include&quot;</span>);</div>
@@ -411,11 +412,11 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   80</span>    std::filesystem::path script_folder_a = include_folder / script_folder;</div>
 <div class="line"><span class="lineno">   81</span> </div>
 <div class="line"><span class="lineno">   82</span>    <span class="comment">// Get full script path</span></div>
-<div class="line"><span class="lineno">   83</span>    std::string script_name = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(absolute_path, </div>
+<div class="line"><span class="lineno">   83</span>    std::string script_name = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(<a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>, </div>
 <div class="line"><span class="lineno">   84</span>        script_folder_a, <a class="code hl_variable" href="classMenuHandler.html#a4322821b80417a481b9b3cca57f25d90">m_script_name_rel</a>);</div>
 <div class="line"><span class="lineno">   85</span> </div>
 <div class="line"><span class="lineno">   86</span>    <span class="comment">// Get full available ports path</span></div>
-<div class="line"><span class="lineno">   87</span>    std::string ports_path = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(absolute_path, </div>
+<div class="line"><span class="lineno">   87</span>    std::string ports_path = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(<a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>, </div>
 <div class="line"><span class="lineno">   88</span>        share_folder, <a class="code hl_variable" href="classMenuHandler.html#a8729778bde667ad38e93076c56345241">m_ports_file_rel</a>);</div>
 <div class="line"><span class="lineno">   89</span>    </div>
 <div class="line"><span class="lineno">   90</span>    <span class="comment">// Run python program</span></div>
@@ -425,10 +426,10 @@ Here is the caller graph for this function:</div>
 <div class="line"><span class="lineno">   94</span>    Py_Finalize();</div>
 <div class="line"><span class="lineno">   95</span> </div>
 <div class="line"><span class="lineno">   96</span>    <span class="comment">// Read available ports</span></div>
-<div class="line"><span class="lineno">   97</span>    std::ifstream ports_file(ports_path);</div>
+<div class="line"><span class="lineno">   97</span>    std::ifstream <a class="code hl_variable" href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_file</a>(ports_path);</div>
 <div class="line"><span class="lineno">   98</span>    std::string line;</div>
 <div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">while</span> (std::getline(ports_file, line))</div>
+<div class="line"><span class="lineno">  100</span>    <span class="keywordflow">while</span> (std::getline(<a class="code hl_variable" href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_file</a>, line))</div>
 <div class="line"><span class="lineno">  101</span>    {</div>
 <div class="line"><span class="lineno">  102</span>        std::istringstream iss(line);</div>
 <div class="line"><span class="lineno">  103</span>        ports_vec.push_back(line);</div>
@@ -439,6 +440,7 @@ Here is the caller graph for this function:</div>
 <div class="ttc" id="aclassMenuHandler_html_a4322821b80417a481b9b3cca57f25d90"><div class="ttname"><a href="classMenuHandler.html#a4322821b80417a481b9b3cca57f25d90">MenuHandler::m_script_name_rel</a></div><div class="ttdeci">std::string m_script_name_rel</div><div class="ttdoc">Name of the python script that reads the available USB ports.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00052">menu_handler.h:52</a></div></div>
 <div class="ttc" id="aclassMenuHandler_html_a8729778bde667ad38e93076c56345241"><div class="ttname"><a href="classMenuHandler.html#a8729778bde667ad38e93076c56345241">MenuHandler::m_ports_file_rel</a></div><div class="ttdeci">std::string m_ports_file_rel</div><div class="ttdoc">Name of the file in which the available USB ports are stored.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00055">menu_handler.h:55</a></div></div>
 <div class="ttc" id="aclassMenuHandler_html_ab1d5562703dfed280cd59342d6318cad"><div class="ttname"><a href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">MenuHandler::generate_absolute_filename</a></div><div class="ttdeci">std::string generate_absolute_filename(const std::filesystem::path &amp;absolute_path, const std::filesystem::path &amp;folder, const std::string &amp;relative_filename)</div><div class="ttdoc">Generate absolute file name.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00117">menu_handler.cpp:117</a></div></div>
+<div class="ttc" id="anamespaceports__read_html_a4010593d8d584e9ad1e9deb885e1fb61"><div class="ttname"><a href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_read.ports_file</a></div><div class="ttdeci">ports_file</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00032">ports_read.py:32</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -703,7 +705,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/lib/<a class="el" href="menu__handler_8h_source.html">menu_handler.h</a></li>
+<li>include/<a class="el" href="menu__handler_8h_source.html">menu_handler.h</a></li>
 <li>src/<a class="el" href="menu__handler_8cpp_source.html">menu_handler.cpp</a></li>
 </ul>
 </div><!-- contents -->

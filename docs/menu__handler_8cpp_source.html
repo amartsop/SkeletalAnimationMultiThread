@@ -69,7 +69,7 @@ $(function() {
   <div class="headertitle"><div class="title">menu_handler.cpp</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="menu__handler_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../include/lib/menu_handler.h&quot;</span></div>
+<a href="menu__handler_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;../include/menu_handler.h&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="classMenuHandler.html#ada8fa76fd0b56de5451e1f148c6ff25f">    8</a></span><a class="code hl_function" href="classMenuHandler.html#ada8fa76fd0b56de5451e1f148c6ff25f">MenuHandler::MenuHandler</a>(igl::opengl::glfw::imgui::ImGuiMenu* menu)</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
@@ -119,7 +119,7 @@ $(function() {
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::vector&lt;std::string&gt; ports_vec;</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// Get absolute file path</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::filesystem::path absolute_path = std::filesystem::current_path();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::filesystem::path <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> = std::filesystem::current_path();</div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Define include relative folder</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::filesystem::path include_folder(<span class="stringliteral">&quot;include&quot;</span>);</div>
@@ -134,11 +134,11 @@ $(function() {
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::filesystem::path script_folder_a = include_folder / script_folder;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Get full script path</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::string script_name = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(absolute_path, </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::string script_name = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(<a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>, </div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        script_folder_a, <a class="code hl_variable" href="classMenuHandler.html#a4322821b80417a481b9b3cca57f25d90">m_script_name_rel</a>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Get full available ports path</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::string ports_path = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(absolute_path, </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::string ports_path = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(<a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>, </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        share_folder, <a class="code hl_variable" href="classMenuHandler.html#a8729778bde667ad38e93076c56345241">m_ports_file_rel</a>);</div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// Run python program</span></div>
@@ -148,10 +148,10 @@ $(function() {
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    Py_Finalize();</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// Read available ports</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::ifstream ports_file(ports_path);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::ifstream <a class="code hl_variable" href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_file</a>(ports_path);</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    std::string line;</div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">while</span> (std::getline(ports_file, line))</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">while</span> (std::getline(<a class="code hl_variable" href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_file</a>, line))</div>
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::istringstream iss(line);</div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        ports_vec.push_back(line);</div>
@@ -161,11 +161,11 @@ $(function() {
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">  117</a></span>std::string <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">MenuHandler::generate_absolute_filename</a>(</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> std::filesystem::path&amp; absolute_path,</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> std::filesystem::path&amp; <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>,</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">const</span> std::filesystem::path&amp; folder, <span class="keyword">const</span> std::string&amp; relative_filename)</div>
 <div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>{</div>
 <div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// Define absolute script folder</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    std::filesystem::path full_folder = absolute_path / folder;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    std::filesystem::path full_folder = <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> / folder;</div>
 <div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// Define full script name</span></div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    std::filesystem::path full_name = full_folder / relative_filename;</div>
@@ -182,6 +182,8 @@ $(function() {
 <div class="ttc" id="aclassMenuHandler_html_a969cf0558f45804ba0c7cb5794c99262"><div class="ttname"><a href="classMenuHandler.html#a969cf0558f45804ba0c7cb5794c99262">MenuHandler::m_left_exoskeleton_port</a></div><div class="ttdeci">std::string m_left_exoskeleton_port</div><div class="ttdoc">Name of the left exoskeleton USB port.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00058">menu_handler.h:58</a></div></div>
 <div class="ttc" id="aclassMenuHandler_html_ab1d5562703dfed280cd59342d6318cad"><div class="ttname"><a href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">MenuHandler::generate_absolute_filename</a></div><div class="ttdeci">std::string generate_absolute_filename(const std::filesystem::path &amp;absolute_path, const std::filesystem::path &amp;folder, const std::string &amp;relative_filename)</div><div class="ttdoc">Generate absolute file name.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00117">menu_handler.cpp:117</a></div></div>
 <div class="ttc" id="aclassMenuHandler_html_ada8fa76fd0b56de5451e1f148c6ff25f"><div class="ttname"><a href="classMenuHandler.html#ada8fa76fd0b56de5451e1f148c6ff25f">MenuHandler::MenuHandler</a></div><div class="ttdeci">MenuHandler(igl::opengl::glfw::imgui::ImGuiMenu *menu)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00008">menu_handler.cpp:8</a></div></div>
+<div class="ttc" id="anamespaceports__read_html_a4010593d8d584e9ad1e9deb885e1fb61"><div class="ttname"><a href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_read.ports_file</a></div><div class="ttdeci">ports_file</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00032">ports_read.py:32</a></div></div>
+<div class="ttc" id="anamespaceports__read_html_ae1b9b8d97281f3866a7c3a7f56806c4d"><div class="ttname"><a href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">ports_read.absolute_path</a></div><div class="ttdeci">absolute_path</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00026">ports_read.py:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,7 +1,7 @@
-<map id="include/lib/hand.h" name="include/lib/hand.h">
-<area shape="rect" id="node1" title=" " alt="" coords="133,5,270,32"/>
-<area shape="rect" id="node2" href="$skeletal__animation_8h.html" title=" " alt="" coords="56,80,200,121"/>
-<area shape="rect" id="node5" href="$hand_8cpp.html" title=" " alt="" coords="224,87,328,114"/>
-<area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="5,169,88,196"/>
-<area shape="rect" id="node4" href="$skeletal__animation_8cpp.html" title=" " alt="" coords="113,169,309,196"/>
+<map id="include/hand.h" name="include/hand.h">
+<area shape="rect" id="node1" title=" " alt="" coords="160,5,277,32"/>
+<area shape="rect" id="node2" href="$skeletal__animation_8h.html" title=" " alt="" coords="23,80,233,107"/>
+<area shape="rect" id="node5" href="$hand_8cpp.html" title=" " alt="" coords="257,80,361,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title=" " alt="" coords="5,155,88,181"/>
+<area shape="rect" id="node4" href="$skeletal__animation_8cpp.html" title=" " alt="" coords="113,155,309,181"/>
 </map>

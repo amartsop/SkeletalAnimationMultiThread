@@ -1,8 +1,8 @@
-<map id="include/lib/animated_hand.h" name="include/lib/animated_hand.h">
-<area shape="rect" id="node1" title=" " alt="" coords="160,5,315,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,169,85,196"/>
-<area shape="rect" id="node3" title=" " alt="" coords="285,169,347,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="327,95,377,121"/>
-<area shape="rect" id="node5" href="$euler__rotations_8h.html" title=" " alt="" coords="119,95,251,121"/>
-<area shape="rect" id="node6" title=" " alt="" coords="110,169,261,196"/>
+<map id="include/animated_hand.h" name="include/animated_hand.h">
+<area shape="rect" id="node1" title=" " alt="" coords="144,5,331,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,155,85,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="285,155,347,181"/>
+<area shape="rect" id="node4" title=" " alt="" coords="327,80,377,107"/>
+<area shape="rect" id="node5" href="$euler__rotations_8h.html" title=" " alt="" coords="119,80,251,107"/>
+<area shape="rect" id="node6" title=" " alt="" coords="110,155,261,181"/>
 </map>

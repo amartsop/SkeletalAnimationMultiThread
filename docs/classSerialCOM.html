@@ -242,7 +242,7 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   21</span>    <span class="comment">//Reading data char by char, code is optimized for simplicity, not speed</span></div>
 <div class="line"><span class="lineno">   22</span>    <span class="keyword">using namespace </span>boost;</div>
 <div class="line"><span class="lineno">   23</span>    <span class="keywordtype">char</span> c;</div>
-<div class="line"><span class="lineno">   24</span>    std::string result;</div>
+<div class="line"><span class="lineno">   24</span>    std::string <a class="code hl_variable" href="namespaceports__read.html#a43f7f45e033db4f3d6332693b6e8875d">result</a>;</div>
 <div class="line"><span class="lineno">   25</span>    <span class="keywordflow">for</span>(;;)</div>
 <div class="line"><span class="lineno">   26</span>    {</div>
 <div class="line"><span class="lineno">   27</span>        asio::read(<a class="code hl_variable" href="classSerialCOM.html#adcb8a6f38ba292af486b3a304ce3421e">serial</a>,asio::buffer(&amp;c,1));</div>
@@ -251,12 +251,13 @@ Here is the call graph for this function:</div>
 <div class="line"><span class="lineno">   30</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;\r&#39;</span>:</div>
 <div class="line"><span class="lineno">   31</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><span class="lineno">   32</span>            <span class="keywordflow">case</span> <span class="charliteral">&#39;\n&#39;</span>:</div>
-<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">return</span> result;</div>
+<div class="line"><span class="lineno">   33</span>                <span class="keywordflow">return</span> <a class="code hl_variable" href="namespaceports__read.html#a43f7f45e033db4f3d6332693b6e8875d">result</a>;</div>
 <div class="line"><span class="lineno">   34</span>            <span class="keywordflow">default</span>:</div>
-<div class="line"><span class="lineno">   35</span>                result+=c;</div>
+<div class="line"><span class="lineno">   35</span>                <a class="code hl_variable" href="namespaceports__read.html#a43f7f45e033db4f3d6332693b6e8875d">result</a>+=c;</div>
 <div class="line"><span class="lineno">   36</span>        }</div>
 <div class="line"><span class="lineno">   37</span>    }</div>
 <div class="line"><span class="lineno">   38</span>}</div>
+<div class="ttc" id="anamespaceports__read_html_a43f7f45e033db4f3d6332693b6e8875d"><div class="ttname"><a href="namespaceports__read.html#a43f7f45e033db4f3d6332693b6e8875d">ports_read.result</a></div><div class="ttdeci">list result</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00016">ports_read.py:16</a></div></div>
 </div><!-- fragment --><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -301,8 +302,9 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="serial__com_8cpp_source.html#l00008">8</a> of file <a class="el" href="serial__com_8cpp_source.html">serial_com.cpp</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">    9</span>{</div>
-<div class="line"><span class="lineno">   10</span>    boost::asio::write(<a class="code hl_variable" href="classSerialCOM.html#adcb8a6f38ba292af486b3a304ce3421e">serial</a>,boost::asio::buffer(s.c_str(),s.size()));</div>
+<div class="line"><span class="lineno">   10</span>    boost::asio::write(<a class="code hl_variable" href="classSerialCOM.html#adcb8a6f38ba292af486b3a304ce3421e">serial</a>,boost::asio::buffer(<a class="code hl_variable" href="namespaceports__read.html#a423c128bced9978fcdcb5b5974a2173a">s</a>.c_str(),<a class="code hl_variable" href="namespaceports__read.html#a423c128bced9978fcdcb5b5974a2173a">s</a>.size()));</div>
 <div class="line"><span class="lineno">   11</span>}</div>
+<div class="ttc" id="anamespaceports__read_html_a423c128bced9978fcdcb5b5974a2173a"><div class="ttname"><a href="namespaceports__read.html#a423c128bced9978fcdcb5b5974a2173a">ports_read.s</a></div><div class="ttdeci">s</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00019">ports_read.py:19</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -360,7 +362,7 @@ Here is the caller graph for this function:</div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>include/lib/<a class="el" href="serial__com_8h_source.html">serial_com.h</a></li>
+<li>include/<a class="el" href="serial__com_8h_source.html">serial_com.h</a></li>
 <li>src/<a class="el" href="serial__com_8cpp_source.html">serial_com.cpp</a></li>
 </ul>
 </div><!-- contents -->
