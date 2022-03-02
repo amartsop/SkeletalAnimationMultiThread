@@ -1,13 +1,2 @@
 \_form#0=94x15:$w + x \vec{i} + y \vec{j} + z \vec{k}$
-\_form#1=138x16:$\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$
-\_form#2=329x39:\[ |I_2|=\left| \int_{0}^T \psi(t) \left\{ u(a,t)- \int_{\gamma(t)}^a \frac{d\theta}{k(\theta,t)} \int_{a}^\theta c(\xi)u_t(\xi,t)\,d\xi \right\} dt \right| \]
-\_form#3=331x39:\[ |I_2|=\left[ \int_{0}^T \psi(t) \left\{ u(a,t)- \int_{\gamma(t)}^a \frac{d\theta}{k(\theta,t)} \int_{a}^\theta c(\xi)u_t(\xi,t)\,d\xi \right\} dt \right| \]
-\_form#4=333x39:\[ |I_2|=\left[ \int_{0}^T \psi(t) \left\{ u(a,t)- \int_{\gamma(t)}^a \frac{d\theta}{k(\theta,t)} \int_{a}^\theta c(\xi)u_t(\xi,t)\,d\xi \right\} dt \right] \]
-\_form#5=244x39:\[ |I_2|=\left[ \int_{0}^T \psi(t) \left\{ u(a,t)- \int_{\gamma(t)}^a \frac{d\theta}{k(\theta,t)} \theta \right\} dt \right] \]
-\_form#6=249x39:\[ |I_2|=\left[ \int_{0}^T \psi(t) \left\{ u(a,t)- \int_{\gamma(t)}^a \frac{d\theta}{k(\theta,t)} {\theta}_{1} \right\} dt \right] \]
-\_form#7=83x14:\[ data =\left[{\theta}_{i_1}, {\theta}_{i_2} \right] \]
-\_form#8=81x14:$ data =\left[{\theta}_{i_1}, {\theta}_{i_2} \right] $
-\_form#9=231x14:$ data =\left[{\theta}_{i_1}, {\theta}_{i_2}, {\theta}_{i_3}, {\theta}_{i_4}, {\theta}_{m_1}, {\theta}_{m_2}, {\theta}_{m_1},{\theta}_{m_1}, \right] $
-\_form#10=336x16:$ data =\left[{\theta}_{i_1}, {\theta}_{i_2}, {\theta}_{i_3}, {\theta}_{i_4}, {\theta}_{m_1}, {\theta}_{m_2}, {\theta}_{m_3}, {\theta}_{m_4}, {\theta}_{t_1}, {\theta}_{t_2}, {\theta}_{t_3}, {\theta}_{t_4}, {\theta}_{t_5} \right]^{T} $
-\_form#11=336x18:\[ data =\left[{\theta}_{i_1}, {\theta}_{i_2}, {\theta}_{i_3}, {\theta}_{i_4}, {\theta}_{m_1}, {\theta}_{m_2}, {\theta}_{m_3}, {\theta}_{m_4}, {\theta}_{t_1}, {\theta}_{t_2}, {\theta}_{t_3}, {\theta}_{t_4}, {\theta}_{t_5} \right]^{T} \]
-\_form#12=336x16:\[\large data =\left[{\theta}_{i_1}, {\theta}_{i_2}, {\theta}_{i_3}, {\theta}_{i_4}, {\theta}_{m_1}, {\theta}_{m_2}, {\theta}_{m_3}, {\theta}_{m_4}, {\theta}_{t_1}, {\theta}_{t_2}, {\theta}_{t_3}, {\theta}_{t_4}, {\theta}_{t_5} \right]^{T} \]
+\_form#1=336x18:\[ data =\left[{\theta}_{i_1}, {\theta}_{i_2}, {\theta}_{i_3}, {\theta}_{i_4}, {\theta}_{m_1}, {\theta}_{m_2}, {\theta}_{m_3}, {\theta}_{m_4}, {\theta}_{t_1}, {\theta}_{t_2}, {\theta}_{t_3}, {\theta}_{t_4}, {\theta}_{t_5} \right]^{T} \]
