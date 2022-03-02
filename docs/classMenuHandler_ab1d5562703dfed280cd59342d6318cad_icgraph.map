@@ -1,0 +1,6 @@
+<map id="MenuHandler::generate_absolute_filename" name="MenuHandler::generate_absolute_filename">
+<area shape="rect" id="node1" title="Generate absolute file name." alt="" coords="580,5,755,47"/>
+<area shape="rect" id="node2" href="$classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0" title="Get available USB ports." alt="" coords="327,5,532,47"/>
+<area shape="rect" id="node3" href="$classMenuHandler.html#a425100756a8e8bfae6ed09827767505b" title="Menu callback function." alt="" coords="108,13,279,39"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="This is the main execution function. It first initiates the libigl viewer and then calls the menu han..." alt="" coords="5,13,60,39"/>
+</map>

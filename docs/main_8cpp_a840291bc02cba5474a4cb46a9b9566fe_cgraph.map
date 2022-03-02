@@ -1,0 +1,18 @@
+<map id="main" name="main">
+<area shape="rect" id="node1" title="This is the main execution function. It first initiates the libigl viewer and then calls the menu han..." alt="" coords="5,252,60,279"/>
+<area shape="rect" id="node2" href="$classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f" title="Animation loop callback." alt="" coords="119,122,268,163"/>
+<area shape="rect" id="node13" href="$classMenuHandler.html#a425100756a8e8bfae6ed09827767505b" title="Menu callback function." alt="" coords="108,252,279,279"/>
+<area shape="rect" id="node16" href="$classSkeletalAnimation.html#a9e13b02a0c0cf4bc9d253c9c6bf92d34" title="Initialize animation." alt="" coords="119,303,268,345"/>
+<area shape="rect" id="node3" href="$classMenuHandler.html#a0d1a6b3c99aabe3e3d2f88e3a6b15b15" title="Check whether the USB ports have been sent by the user (Is OK pressed?)." alt="" coords="327,5,532,32"/>
+<area shape="rect" id="node4" href="$classAnimatedHand.html#addb9ca7250c9bd196595cd10ced9e727" title=" " alt="" coords="336,57,523,98"/>
+<area shape="rect" id="node5" href="$classExoskeleton.html#a28cfac80989e1548d0fcec09e2c5b1d6" title="Get joint angles." alt="" coords="346,122,513,163"/>
+<area shape="rect" id="node9" href="$classSkeletalAnimation.html#abc68894dabf2a53402bd74dd1eca6ebb" title="Setup meshes." alt="" coords="354,217,505,258"/>
+<area shape="rect" id="node6" href="$classUtils.html#ade242e15e15094b75fdb9d5163eb8a5b" title="Convert degrees to rad." alt="" coords="611,64,724,91"/>
+<area shape="rect" id="node7" href="$classExoskeleton.html#ae3bd5db26fae85588e9a7efd202ced50" title="Read incoming data." alt="" coords="803,199,972,241"/>
+<area shape="rect" id="node8" href="$classUtils.html#a6e7193f2c602f2f8e1553c2cfefe9979" title="Convert comma&#45;delimited string to double vector of analog values." alt="" coords="1020,199,1176,241"/>
+<area shape="rect" id="node10" href="$classMenuHandler.html#a99ef8b4eed51bb9d82fec9f8243f9674" title="Get the USB port for the left exoskeleton." alt="" coords="584,166,751,207"/>
+<area shape="rect" id="node11" href="$classMenuHandler.html#a48e6fb0053eab65d523920d1c1b2bc6b" title="Get the USB port for the right exoskeleton." alt="" coords="580,231,755,273"/>
+<area shape="rect" id="node12" href="$classExoskeleton.html#a16bc036a0caad1882dd602d047b1d843" title="Initialize the exoskeleton." alt="" coords="585,297,750,324"/>
+<area shape="rect" id="node14" href="$classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0" title="Get available USB ports." alt="" coords="327,307,532,349"/>
+<area shape="rect" id="node15" href="$classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad" title="Generate absolute file name." alt="" coords="580,349,755,390"/>
+</map>

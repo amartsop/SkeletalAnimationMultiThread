@@ -1,0 +1,4 @@
+<map id="MenuHandler::get_available_usb_ports" name="MenuHandler::get_available_usb_ports">
+<area shape="rect" id="node1" title="Get available USB ports." alt="" coords="5,5,211,47"/>
+<area shape="rect" id="node2" href="$classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad" title="Generate absolute file name." alt="" coords="259,5,433,47"/>
+</map>

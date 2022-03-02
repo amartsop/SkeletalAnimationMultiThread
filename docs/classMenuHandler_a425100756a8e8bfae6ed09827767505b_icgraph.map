@@ -1,0 +1,4 @@
+<map id="MenuHandler::callback" name="MenuHandler::callback">
+<area shape="rect" id="node1" title="Menu callback function." alt="" coords="108,5,279,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="This is the main execution function. It first initiates the libigl viewer and then calls the menu han..." alt="" coords="5,5,60,32"/>
+</map>

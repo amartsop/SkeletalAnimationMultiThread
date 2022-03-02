@@ -1,0 +1,4 @@
+<map id="SerialCOM::initialize_stream" name="SerialCOM::initialize_stream">
+<area shape="rect" id="node1" title="Setup up stream by reading the values a couple times first." alt="" coords="5,5,160,47"/>
+<area shape="rect" id="node2" href="$classSerialCOM.html#a9ba1662c9c34f0a01ff4c05f063105a7" title="Blocks until a line is received from the serial device." alt="" coords="208,13,363,39"/>
+</map>

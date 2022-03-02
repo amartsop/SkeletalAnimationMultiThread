@@ -1,0 +1,13 @@
+<map id="SkeletalAnimation::animation_loop" name="SkeletalAnimation::animation_loop">
+<area shape="rect" id="node1" title="Animation loop callback." alt="" coords="5,90,155,131"/>
+<area shape="rect" id="node2" href="$classMenuHandler.html#a0d1a6b3c99aabe3e3d2f88e3a6b15b15" title="Check whether the USB ports have been sent by the user (Is OK pressed?)." alt="" coords="203,5,408,32"/>
+<area shape="rect" id="node3" href="$classAnimatedHand.html#addb9ca7250c9bd196595cd10ced9e727" title=" " alt="" coords="212,57,399,98"/>
+<area shape="rect" id="node4" href="$classExoskeleton.html#a28cfac80989e1548d0fcec09e2c5b1d6" title="Get joint angles." alt="" coords="222,122,389,163"/>
+<area shape="rect" id="node8" href="$classSkeletalAnimation.html#abc68894dabf2a53402bd74dd1eca6ebb" title="Setup meshes." alt="" coords="230,217,381,258"/>
+<area shape="rect" id="node5" href="$classUtils.html#ade242e15e15094b75fdb9d5163eb8a5b" title="Convert degrees to rad." alt="" coords="487,79,600,105"/>
+<area shape="rect" id="node6" href="$classExoskeleton.html#ae3bd5db26fae85588e9a7efd202ced50" title="Read incoming data." alt="" coords="679,214,848,255"/>
+<area shape="rect" id="node7" href="$classUtils.html#a6e7193f2c602f2f8e1553c2cfefe9979" title="Convert comma&#45;delimited string to double vector of analog values." alt="" coords="896,214,1052,255"/>
+<area shape="rect" id="node9" href="$classMenuHandler.html#a99ef8b4eed51bb9d82fec9f8243f9674" title="Get the USB port for the left exoskeleton." alt="" coords="460,181,627,222"/>
+<area shape="rect" id="node10" href="$classMenuHandler.html#a48e6fb0053eab65d523920d1c1b2bc6b" title="Get the USB port for the right exoskeleton." alt="" coords="456,246,631,287"/>
+<area shape="rect" id="node11" href="$classExoskeleton.html#a16bc036a0caad1882dd602d047b1d843" title="Initialize the exoskeleton." alt="" coords="461,312,626,339"/>
+</map>

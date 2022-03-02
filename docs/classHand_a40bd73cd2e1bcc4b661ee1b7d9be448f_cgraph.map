@@ -1,0 +1,4 @@
+<map id="Hand::update" name="Hand::update">
+<area shape="rect" id="node1" title="Updates the hand." alt="" coords="5,13,115,39"/>
+<area shape="rect" id="node2" href="$classEulerRotations.html#a73537d0ad1464ef752367b5416029fab" title="Convert Euler angles to quaternions." alt="" coords="163,5,321,47"/>
+</map>

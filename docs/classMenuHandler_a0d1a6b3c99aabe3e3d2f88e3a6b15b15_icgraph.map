@@ -1,0 +1,5 @@
+<map id="MenuHandler::are_ports_set" name="MenuHandler::are_ports_set">
+<area shape="rect" id="node1" title="Check whether the USB ports have been sent by the user (Is OK pressed?)." alt="" coords="305,13,511,39"/>
+<area shape="rect" id="node2" href="$classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f" title="Animation loop callback." alt="" coords="108,5,257,47"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="This is the main execution function. It first initiates the libigl viewer and then calls the menu han..." alt="" coords="5,13,60,39"/>
+</map>

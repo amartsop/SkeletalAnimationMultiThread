@@ -1,0 +1,4 @@
+<map id="SkeletalAnimation::initialize" name="SkeletalAnimation::initialize">
+<area shape="rect" id="node1" title="Initialize animation." alt="" coords="108,5,257,47"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="This is the main execution function. It first initiates the libigl viewer and then calls the menu han..." alt="" coords="5,13,60,39"/>
+</map>

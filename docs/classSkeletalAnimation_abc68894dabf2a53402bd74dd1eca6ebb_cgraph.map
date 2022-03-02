@@ -1,0 +1,8 @@
+<map id="SkeletalAnimation::setup_exoskeletons" name="SkeletalAnimation::setup_exoskeletons">
+<area shape="rect" id="node1" title="Setup meshes." alt="" coords="5,71,156,112"/>
+<area shape="rect" id="node2" href="$classMenuHandler.html#a99ef8b4eed51bb9d82fec9f8243f9674" title="Get the USB port for the left exoskeleton." alt="" coords="208,5,375,47"/>
+<area shape="rect" id="node3" href="$classMenuHandler.html#a48e6fb0053eab65d523920d1c1b2bc6b" title="Get the USB port for the right exoskeleton." alt="" coords="204,71,379,112"/>
+<area shape="rect" id="node4" href="$classExoskeleton.html#a16bc036a0caad1882dd602d047b1d843" title="Initialize the exoskeleton." alt="" coords="209,137,374,163"/>
+<area shape="rect" id="node5" href="$classExoskeleton.html#ae3bd5db26fae85588e9a7efd202ced50" title="Read incoming data." alt="" coords="427,129,596,171"/>
+<area shape="rect" id="node6" href="$classUtils.html#a6e7193f2c602f2f8e1553c2cfefe9979" title="Convert comma&#45;delimited string to double vector of analog values." alt="" coords="644,129,800,171"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Utils::deg2rad" name="Utils::deg2rad">
+<area shape="rect" id="node1" title="Convert degrees to rad." alt="" coords="520,13,633,39"/>
+<area shape="rect" id="node2" href="$classExoskeleton.html#a28cfac80989e1548d0fcec09e2c5b1d6" title="Get joint angles." alt="" coords="305,5,472,47"/>
+<area shape="rect" id="node3" href="$classSkeletalAnimation.html#a9468d895fd44e9d9220cf266396bdf6f" title="Animation loop callback." alt="" coords="108,5,257,47"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe" title="This is the main execution function. It first initiates the libigl viewer and then calls the menu han..." alt="" coords="5,13,60,39"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="Exoskeleton::get_joint_angles" name="Exoskeleton::get_joint_angles">
+<area shape="rect" id="node1" title="Get joint angles." alt="" coords="5,27,172,69"/>
+<area shape="rect" id="node2" href="$classUtils.html#ade242e15e15094b75fdb9d5163eb8a5b" title="Convert degrees to rad." alt="" coords="248,5,361,32"/>
+<area shape="rect" id="node3" href="$classExoskeleton.html#ae3bd5db26fae85588e9a7efd202ced50" title="Read incoming data." alt="" coords="220,57,389,98"/>
+<area shape="rect" id="node4" href="$classUtils.html#a6e7193f2c602f2f8e1553c2cfefe9979" title="Convert comma&#45;delimited string to double vector of analog values." alt="" coords="437,57,593,98"/>
+</map>
