@@ -6,7 +6,7 @@
         {
             "type": "shell",
             "label": "build",
-            "command": "make",
+            "command": "make -j6",
             "options": {
                 "cwd": "${workspaceRoot}/build"
             }

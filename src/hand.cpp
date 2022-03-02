@@ -1,4 +1,4 @@
-#include "../include/lib/hand.h"
+#include "../include/hand.h"
 
 /**
  * @brief Construct a new Hand:: Hand object.

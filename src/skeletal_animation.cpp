@@ -1,4 +1,4 @@
-#include "../include/lib/skeletal_animation.h"
+#include "../include/skeletal_animation.h"
 
 /**
  * @brief Initializes skeletal animation by copying the input arguments

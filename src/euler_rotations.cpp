@@ -1,4 +1,4 @@
-#include "../include/lib/euler_rotations.h"
+#include "../include/euler_rotations.h"
 
 /**
  * @brief 

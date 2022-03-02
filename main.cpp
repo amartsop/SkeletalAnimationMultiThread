@@ -1,10 +1,10 @@
 #include <iostream>
 #include <future>
 
-#include "./include/lib/exoskeleton.h"
-#include "./include/lib/skeletal_animation.h"
-#include "./include/lib/animated_hand.h"
-#include "./include/lib/menu_handler.h"
+#include "./include/exoskeleton.h"
+#include "./include/skeletal_animation.h"
+#include "./include/animated_hand.h"
+#include "./include/menu_handler.h"
 
 #include <igl/opengl/glfw/Viewer.h>
 #include <igl/opengl/glfw/imgui/ImGuiPlugin.h>
@@ -22,9 +22,9 @@
 
 int main(void)
 {
-  // Animation
+  // Initialize viewer
   igl::opengl::glfw::Viewer viewer;
-
+  
   // Attach a menu plugin
   igl::opengl::glfw::imgui::ImGuiPlugin plugin;
   viewer.plugins.push_back(&plugin);

@@ -1,4 +1,4 @@
-#include "../include/lib/animated_hand.h"
+#include "../include/animated_hand.h"
 
 // Generate hand angles 
 std::vector<AnimatedHand::EulerID> AnimatedHand::get_hand_angles(const

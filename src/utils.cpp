@@ -1,4 +1,4 @@
-#include "../include/lib/utils.h"
+#include "../include/utils.h"
 
 /**
  * @brief Return a vector of integers from a comma-delimited string.

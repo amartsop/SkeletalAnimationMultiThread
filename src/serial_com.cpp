@@ -1,4 +1,4 @@
-#include "../include/lib/serial_com.h"
+#include "../include/serial_com.h"
 
 /**
  * Write a string to the serial device.

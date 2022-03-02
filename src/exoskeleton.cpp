@@ -1,4 +1,4 @@
-#include "../include/lib/exoskeleton.h"
+#include "../include/exoskeleton.h"
 
 
 /**
