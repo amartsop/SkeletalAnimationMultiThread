@@ -79,7 +79,7 @@ Hand::Hand(Exoskeleton* exo_handler, AnimatedHand* anim_hand,
     
 /**
  * @brief It updates the hand vertices based on the euler angles for its 
- * joint of the skeleton. These are fed throught the AnimatedHand::EulerID 
+ * skeleton joints. These are fed throught the AnimatedHand::EulerID 
  * struct. Based on the defined mapping it performs the forward kinematics 
  * and calcualtes all the hand vertices.
  * @param euler_id The custom EulerID structure as described in AnimatedHand::EulerID.

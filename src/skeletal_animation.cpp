@@ -71,7 +71,6 @@ bool SkeletalAnimation::animation_loop(igl::opengl::glfw::Viewer& viewer)
  * https://github.com/libigl/libigl/blob/main/tutorial/107_MultipleMeshes/main.cpp.
  * @param viewer A reference to the viewer handle.
  */
-
 void SkeletalAnimation::setup_exoskeletons(igl::opengl::glfw::Viewer& viewer)
 {
     // Resize viewer data list

@@ -1,6 +1,5 @@
 #include "../include/exoskeleton.h"
 
-
 /**
  * @brief It initialiazes the serial communication and sets the asychronous 
  * callback function. See https://en.cppreference.com/w/cpp/thread/async.
@@ -51,7 +50,7 @@ std::vector<double> Exoskeleton::incoming_data_callback(void)
  * loop with the exoskeleton data. It returns a vector
  * of the raw jont angle data converted to radians. It also manages the 
  * asynchronous threading.
- * @return std::vector<double> 
+ * @return std::vector<double> The joint angles.
  */
 std::vector<double> Exoskeleton::get_joint_angles(void)
 {

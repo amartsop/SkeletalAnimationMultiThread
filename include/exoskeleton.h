@@ -11,7 +11,7 @@
 /// Class Exoskeleton
 /**
  * This class is the interface between the hardware and the software. 
- * It's main aim is to provide a callback function that reads asychronously 
+ * Its goal is to provide a callback function that reads asychronously 
  * the serial data from the SerialCOM:: class and translates it to 
  * joint angle values. It then sends the data to the animation loop and to the 
  * rendering engine
@@ -21,7 +21,7 @@ class Exoskeleton
 
 public:
 
-    /// Empty constructor
+    /// Empty constructor.
     Exoskeleton() {};
 
     /// Initialize the exoskeleton.
@@ -35,20 +35,20 @@ public:
 
 private:
 
-    /// Measurements num
+    /// Measurements num.
     const int m_meas_num = 13;
 
-    /// Sensors data vector (raw)
+    /// Sensors data vector (raw).
     std::vector<double> m_raw_sensor_data;
 
 private:
 
-    /// Serial communication handler
+    /// Serial communication handler.
     std::shared_ptr<SerialCOM> m_serial;
 
-    /// Future function handle
+    /// Future function handle.
     std::future<std::vector<double>> m_future_fun;
 
-    /// Termination flag for callback function
+    /// Termination flag for callback function.
     bool m_return_value = 0;
 };
