@@ -53,76 +53,44 @@ void MenuHandler::callback(void)
 }
 
 /**
- * @brief This function simply generates the available USB ports by running 
- * a simple Python script (./scripts/port_read.py). The Python file is invoked 
- * using the Python/C API. See https://docs.python.org/3/c-api/index.html
- * 
+ * @brief This function simply generates the available USB ports. 
  * @return std::vector<std::string> The available USB ports
  */
 std::vector<std::string> MenuHandler::get_available_usb_ports(void)
 {
-    // Initialize ports vector    
-    std::vector<std::string> ports_vec;
+    // Initialize all ports
+    std::vector<std::string> ports;
 
-    // Get absolute file path
-    std::filesystem::path absolute_path = std::filesystem::current_path();
-
-    // Define include relative folder
-    std::filesystem::path include_folder("include");
-
-    // Define script relative folder
-    std::filesystem::path script_folder("scripts");
-
-    // Define share relative folder
-    std::filesystem::path share_folder("share");
-
-    // Define absolute script folder
-    std::filesystem::path script_folder_a = include_folder / script_folder;
-
-    // Get full script path
-    std::string script_name = generate_absolute_filename(absolute_path, 
-        script_folder_a, m_script_name_rel);
-
-    // Get full available ports path
-    std::string ports_path = generate_absolute_filename(absolute_path, 
-        share_folder, m_ports_file_rel);
-    
-    // Run python program
-	Py_Initialize();
-	FILE* fp = fopen(script_name.c_str(), "r");
-    PyRun_SimpleFile(fp, script_name.c_str());
-	Py_Finalize();
-
-    // Read available ports
-    std::ifstream ports_file(ports_path);
-    std::string line;
-
-    while (std::getline(ports_file, line))
+    // Get the listed usb ports
+    std::string usb_path("/dev/");
+    std::string key("tty");
+    for (const auto & entry : std::filesystem::directory_iterator(usb_path))
     {
-        std::istringstream iss(line);
-        ports_vec.push_back(line);
+        //Get path string
+        std::string path_string = entry.path().string();
+    
+        // Check if key is in path string
+        if (path_string.find(key) != std::string::npos)
+        {
+            ports.push_back(path_string);
+        }
     }
 
-    return ports_vec;
-}
+    // Initialize availale ports
+    std::vector<std::string> available_ports;
 
-/**
- * @brief It generates the absolute name of a file given the 
- * it's relative filename and the folder it is in.
- * @param absolute_path The absolute path we are in.
- * @param folder The folder in which the file is in
- * @param relative_filename The relative filename of the file.
- * @return std::string The absolute filename of the file of interest.
- */
-std::string MenuHandler::generate_absolute_filename(
-    const std::filesystem::path& absolute_path,
-    const std::filesystem::path& folder, const std::string& relative_filename)
-{
-    // Define absolute script folder
-    std::filesystem::path full_folder = absolute_path / folder;
+    // Check for all ports if they are available
+    for (size_t i = 0; i < ports.size(); i++)
+    {
+        int serial_port = open(ports.at(i).c_str(), O_RDWR);
 
-    // Define full script name
-    std::filesystem::path full_name = full_folder / relative_filename;
+        struct termios tty;
+        if(tcgetattr(serial_port, &tty) == 0) {
+            available_ports.push_back(ports.at(i));
+        }
 
-    return full_name.string();
+        close(serial_port);
+    }
+
+    return available_ports;
 }

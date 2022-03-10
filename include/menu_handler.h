@@ -5,8 +5,11 @@
 #include <fstream>
 #include <sstream>
 #include <filesystem>
-#include <Python.h>
 #include <stdio.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <termios.h>
+
 
 #include <igl/opengl/glfw/imgui/ImGuiPlugin.h>
 #include <igl/opengl/glfw/imgui/ImGuiMenu.h>
@@ -42,18 +45,8 @@ private:
     /// Get available USB ports.
     std::vector<std::string> get_available_usb_ports(void);
 
-    /// Generate absolute file name.
-    std::string generate_absolute_filename(const std::filesystem::path&
-        absolute_path, const std::filesystem::path& folder,
-        const std::string& relative_filename);
-
 private:
-    /// Name of the python script that reads the available USB ports.
-    std::string m_script_name_rel = "ports_read.py";
     
-    /// Name of the file in which the available USB ports are stored.
-    std::string m_ports_file_rel = "available_ports.txt";
-
     /// Name of the left exoskeleton USB port.
     std::string m_left_exoskeleton_port;
 

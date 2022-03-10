@@ -17,10 +17,7 @@ option(LIBIGL_USE_STATIC_LIBRARY "Use libIGL as static library" ON)
 include(libigl)
 
 # Boost linking
-find_package(Boost 1.77 EXACT REQUIRED COMPONENTS filesystem system iostreams)
-
-# Python linking
-find_package(PythonLibs 2.7)
+find_package(Boost REQUIRED COMPONENTS filesystem system iostreams)
 
 # Include directories
 include_directories(
@@ -40,13 +37,13 @@ set(SOURCES
   )
 
 # Libraries
-set(ALL_LIBS ${ARMADILLO_LIBRARIES} ${Boost_LIBRARIES} ${PYTHON_LIBRARIES} 
+set(ALL_LIBS ${ARMADILLO_LIBRARIES} ${Boost_LIBRARIES}
   igl::glfw igl::imgui igl::png)
 
 # target
 add_executable(main main.cpp ${SOURCES})
 
 target_include_directories(main PRIVATE ${ARMADILLO_INCLUDE_DIRS}
-    ${Boost_INCLUDE_DIRS} ${PYTHON_INCLUDE_DIRS})
+    ${Boost_INCLUDE_DIRS})
     
 target_link_libraries(main ${ALL_LIBS})
