@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Skeletal Animation Mulrithread: Main Page</title>
+<title>Skeletal Animation Multithread: Skeletal Animation for Three-finger Exoskeleton</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Skeletal Animation Mulrithread
+   <div id="projectname">Skeletal Animation Multithread
    </div>
   </td>
  </tr>
@@ -61,10 +61,15 @@ $(function() {
 </iframe>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Skeletal Animation Mulrithread Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Skeletal Animation for Three-finger <a class="el" href="classExoskeleton.html" title="Class Exoskeleton.">Exoskeleton</a> </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md_README"></a>This application allows real-time rendering of the <a href="https://github.com/amartsop/Exoskeleton">three-finger exoskeleton</a> with the help of a photorealistic hand model. The proposed model is based on the principles of skeletal animation. Using this techique the virtual hand is represented in two parts: the mesh which constitutes a realistic representation of the geometry and a hierarchical set of interconnected parts (called bones) that define the motion of the virtual avatar. Each bone has a three-dimensional transformation from the default bind pose (which includes its position, scale and orientation), and an optional parent bone. The bones therefore form a hierarchy. The full transform of a child node is the product of its parent transform and its own transform. Each bone in the skeleton is associated with some portion of the character’s visual representation (the mesh) in a process called skinning. In the most common case of a polygonal mesh character, the bone is associated with a group of vertices; for example, in a model of a human being, the bone for the thigh would be associated with the vertices making up the polygons in the model’s thigh.</p>
+<p ><img src="./images/animation1.svg" alt="" style="pointer-events: none;" width="100%" class="inline"/></p>
+<p >Portions of the character’s skin can normally be associated with multiple bones, each one having a scaling factors called vertex weights, or blend weights. The movement of skin near the joints of two bones, can therefore be influenced by both bones. By applying these ideas the user can apply direct transformations to the bones of the model and produce real-like deformations of the surrounding mesh.</p>
+<p >For more information on the software please see the reference document <a href="https://github.com/amartsop/ExoskeletonHandover/blob/master/main.pdf">reference document</a>, while for the full documentation please visit the <a href="https://amartsop.github.io/SkeletalAnimationMultiThread/">API referece</a>. </p>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

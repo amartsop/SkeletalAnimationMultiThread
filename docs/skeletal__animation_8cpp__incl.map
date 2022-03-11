@@ -21,9 +21,9 @@
 <area shape="rect" id="node30" title=" " alt="" coords="2014,251,2197,278"/>
 <area shape="rect" id="node31" title=" " alt="" coords="2221,251,2291,278"/>
 <area shape="rect" id="node32" title=" " alt="" coords="2316,251,2479,278"/>
-<area shape="rect" id="node33" href="$menu__handler_8h.html" title=" " alt="" coords="2730,169,2857,196"/>
-<area shape="rect" id="node41" title=" " alt="" coords="2881,169,3007,196"/>
-<area shape="rect" id="node42" title=" " alt="" coords="3032,169,3157,196"/>
+<area shape="rect" id="node33" href="$menu__handler_8h.html" title=" " alt="" coords="2885,169,3011,196"/>
+<area shape="rect" id="node43" title=" " alt="" coords="3035,169,3162,196"/>
+<area shape="rect" id="node44" title=" " alt="" coords="3187,169,3312,196"/>
 <area shape="rect" id="node9" title=" " alt="" coords="437,333,488,360"/>
 <area shape="rect" id="node10" title=" " alt="" coords="211,333,275,360"/>
 <area shape="rect" id="node11" href="$utils_8h.html" title=" " alt="" coords="350,333,413,360"/>
@@ -34,11 +34,13 @@
 <area shape="rect" id="node16" title=" " alt="" coords="24,408,141,435"/>
 <area shape="rect" id="node18" href="$euler__rotations_8h.html" title=" " alt="" coords="513,333,645,360"/>
 <area shape="rect" id="node19" title=" " alt="" coords="503,408,654,435"/>
-<area shape="rect" id="node34" title=" " alt="" coords="2757,251,2830,278"/>
-<area shape="rect" id="node35" title=" " alt="" coords="2855,251,2945,278"/>
-<area shape="rect" id="node36" title=" " alt="" coords="2970,251,3049,278"/>
-<area shape="rect" id="node37" title=" " alt="" coords="3073,251,3140,278"/>
-<area shape="rect" id="node38" title=" " alt="" coords="3165,244,3323,285"/>
-<area shape="rect" id="node39" title=" " alt="" coords="3347,244,3506,285"/>
-<area shape="rect" id="node40" title=" " alt="" coords="3530,244,3689,285"/>
+<area shape="rect" id="node34" title=" " alt="" coords="3805,251,3878,278"/>
+<area shape="rect" id="node35" title=" " alt="" coords="2705,251,2796,278"/>
+<area shape="rect" id="node36" title=" " alt="" coords="2820,251,2887,278"/>
+<area shape="rect" id="node37" title=" " alt="" coords="2911,251,2985,278"/>
+<area shape="rect" id="node38" title=" " alt="" coords="3010,251,3073,278"/>
+<area shape="rect" id="node39" title=" " alt="" coords="3097,251,3181,278"/>
+<area shape="rect" id="node40" title=" " alt="" coords="3205,244,3363,285"/>
+<area shape="rect" id="node41" title=" " alt="" coords="3387,244,3546,285"/>
+<area shape="rect" id="node42" title=" " alt="" coords="3570,244,3729,285"/>
 </map>

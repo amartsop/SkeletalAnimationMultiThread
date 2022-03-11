@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Skeletal Animation Mulrithread: src/menu_handler.cpp Source File</title>
+<title>Skeletal Animation Multithread: src/menu_handler.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">Skeletal Animation Mulrithread
+   <div id="projectname">Skeletal Animation Multithread
    </div>
   </td>
  </tr>
@@ -113,77 +113,51 @@ $(function() {
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    }</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0">   62</a></span>std::vector&lt;std::string&gt; <a class="code hl_function" href="classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0">MenuHandler::get_available_usb_ports</a>(<span class="keywordtype">void</span>)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>{</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Initialize ports vector    </span></div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::vector&lt;std::string&gt; ports_vec;</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="comment">// Get absolute file path</span></div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    std::filesystem::path <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> = std::filesystem::current_path();</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="comment">// Define include relative folder</span></div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    std::filesystem::path include_folder(<span class="stringliteral">&quot;include&quot;</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <span class="comment">// Define script relative folder</span></div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::filesystem::path script_folder(<span class="stringliteral">&quot;scripts&quot;</span>);</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="comment">// Define share relative folder</span></div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    std::filesystem::path share_folder(<span class="stringliteral">&quot;share&quot;</span>);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0">   59</a></span>std::vector&lt;std::string&gt; <a class="code hl_function" href="classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0">MenuHandler::get_available_usb_ports</a>(<span class="keywordtype">void</span>)</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>{</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    <span class="comment">// Initialize all ports</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::vector&lt;std::string&gt; ports;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    <span class="comment">// Get the listed usb ports</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::string usb_path(<span class="stringliteral">&quot;/dev/&quot;</span>);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    std::string key(<span class="stringliteral">&quot;tty&quot;</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp; entry : std::filesystem::directory_iterator(usb_path))</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    {</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="comment">//Get path string</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        std::string path_string = entry.path().string();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="comment">// Check if key is in path string</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        <span class="keywordflow">if</span> (path_string.find(key) != std::string::npos)</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>        {</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            ports.push_back(path_string);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>        }</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    }</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Define absolute script folder</span></div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::filesystem::path script_folder_a = include_folder / script_folder;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="comment">// Initialize availale ports</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::vector&lt;std::string&gt; available_ports;</div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
-<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Get full script path</span></div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    std::string script_name = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(<a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>, </div>
-<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        script_folder_a, <a class="code hl_variable" href="classMenuHandler.html#a4322821b80417a481b9b3cca57f25d90">m_script_name_rel</a>);</div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">// Get full available ports path</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    std::string ports_path = <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">generate_absolute_filename</a>(<a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>, </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        share_folder, <a class="code hl_variable" href="classMenuHandler.html#a8729778bde667ad38e93076c56345241">m_ports_file_rel</a>);</div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>    </div>
-<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    <span class="comment">// Run python program</span></div>
-<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    Py_Initialize();</div>
-<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>    FILE* fp = fopen(script_name.c_str(), <span class="stringliteral">&quot;r&quot;</span>);</div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    PyRun_SimpleFile(fp, script_name.c_str());</div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    Py_Finalize();</div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment">// Read available ports</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::ifstream <a class="code hl_variable" href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_file</a>(ports_path);</div>
-<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    std::string line;</div>
-<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
-<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">while</span> (std::getline(<a class="code hl_variable" href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_file</a>, line))</div>
-<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    {</div>
-<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::istringstream iss(line);</div>
-<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        ports_vec.push_back(line);</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    }</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    <span class="keywordflow">return</span> ports_vec;</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>}</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span> </div>
-<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">  117</a></span>std::string <a class="code hl_function" href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">MenuHandler::generate_absolute_filename</a>(</div>
-<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> std::filesystem::path&amp; <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a>,</div>
-<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>    <span class="keyword">const</span> std::filesystem::path&amp; folder, <span class="keyword">const</span> std::string&amp; relative_filename)</div>
-<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>{</div>
-<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    <span class="comment">// Define absolute script folder</span></div>
-<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    std::filesystem::path full_folder = <a class="code hl_variable" href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">absolute_path</a> / folder;</div>
-<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
-<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">// Define full script name</span></div>
-<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    std::filesystem::path full_name = full_folder / relative_filename;</div>
-<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span> </div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keywordflow">return</span> full_name.string();</div>
-<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>}</div>
-<div class="ttc" id="aclassMenuHandler_html_a159bf0418c8bb1509a2f8698ef45d1bc"><div class="ttname"><a href="classMenuHandler.html#a159bf0418c8bb1509a2f8698ef45d1bc">MenuHandler::m_right_exoskeleton_port</a></div><div class="ttdeci">std::string m_right_exoskeleton_port</div><div class="ttdoc">Name of the right exoskeleton USB port.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00061">menu_handler.h:61</a></div></div>
-<div class="ttc" id="aclassMenuHandler_html_a169a4ba92e72cd6c5a699151ea4e0bf0"><div class="ttname"><a href="classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0">MenuHandler::get_available_usb_ports</a></div><div class="ttdeci">std::vector&lt; std::string &gt; get_available_usb_ports(void)</div><div class="ttdoc">Get available USB ports.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00062">menu_handler.cpp:62</a></div></div>
-<div class="ttc" id="aclassMenuHandler_html_a408bc27b35692e85b6c33141b6c17be9"><div class="ttname"><a href="classMenuHandler.html#a408bc27b35692e85b6c33141b6c17be9">MenuHandler::m_menu</a></div><div class="ttdeci">igl::opengl::glfw::imgui::ImGuiMenu * m_menu</div><div class="ttdoc">ImGui menu handle pointer.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00040">menu_handler.h:40</a></div></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="comment">// Check for all ports if they are available</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; ports.size(); i++)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">int</span> serial_port = open(ports.at(i).c_str(), O_RDWR);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        <span class="keyword">struct </span>termios tty;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span>(tcgetattr(serial_port, &amp;tty) == 0) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            available_ports.push_back(ports.at(i));</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        }</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        close(serial_port);</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    }</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> available_ports;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="ttc" id="aclassMenuHandler_html_a159bf0418c8bb1509a2f8698ef45d1bc"><div class="ttname"><a href="classMenuHandler.html#a159bf0418c8bb1509a2f8698ef45d1bc">MenuHandler::m_right_exoskeleton_port</a></div><div class="ttdeci">std::string m_right_exoskeleton_port</div><div class="ttdoc">Name of the right exoskeleton USB port.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00054">menu_handler.h:54</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html_a169a4ba92e72cd6c5a699151ea4e0bf0"><div class="ttname"><a href="classMenuHandler.html#a169a4ba92e72cd6c5a699151ea4e0bf0">MenuHandler::get_available_usb_ports</a></div><div class="ttdeci">std::vector&lt; std::string &gt; get_available_usb_ports(void)</div><div class="ttdoc">Get available USB ports.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00059">menu_handler.cpp:59</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html_a408bc27b35692e85b6c33141b6c17be9"><div class="ttname"><a href="classMenuHandler.html#a408bc27b35692e85b6c33141b6c17be9">MenuHandler::m_menu</a></div><div class="ttdeci">igl::opengl::glfw::imgui::ImGuiMenu * m_menu</div><div class="ttdoc">ImGui menu handle pointer.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00043">menu_handler.h:43</a></div></div>
 <div class="ttc" id="aclassMenuHandler_html_a425100756a8e8bfae6ed09827767505b"><div class="ttname"><a href="classMenuHandler.html#a425100756a8e8bfae6ed09827767505b">MenuHandler::callback</a></div><div class="ttdeci">void callback(void)</div><div class="ttdoc">Menu callback function.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00019">menu_handler.cpp:19</a></div></div>
-<div class="ttc" id="aclassMenuHandler_html_a4322821b80417a481b9b3cca57f25d90"><div class="ttname"><a href="classMenuHandler.html#a4322821b80417a481b9b3cca57f25d90">MenuHandler::m_script_name_rel</a></div><div class="ttdeci">std::string m_script_name_rel</div><div class="ttdoc">Name of the python script that reads the available USB ports.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00052">menu_handler.h:52</a></div></div>
-<div class="ttc" id="aclassMenuHandler_html_a8729778bde667ad38e93076c56345241"><div class="ttname"><a href="classMenuHandler.html#a8729778bde667ad38e93076c56345241">MenuHandler::m_ports_file_rel</a></div><div class="ttdeci">std::string m_ports_file_rel</div><div class="ttdoc">Name of the file in which the available USB ports are stored.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00055">menu_handler.h:55</a></div></div>
-<div class="ttc" id="aclassMenuHandler_html_a91ff632b00ef3ccde5798548d87fa09f"><div class="ttname"><a href="classMenuHandler.html#a91ff632b00ef3ccde5798548d87fa09f">MenuHandler::m_ports_set</a></div><div class="ttdeci">bool m_ports_set</div><div class="ttdoc">Flag that stores the state of the USB port (whether are set or not).</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00064">menu_handler.h:64</a></div></div>
-<div class="ttc" id="aclassMenuHandler_html_a969cf0558f45804ba0c7cb5794c99262"><div class="ttname"><a href="classMenuHandler.html#a969cf0558f45804ba0c7cb5794c99262">MenuHandler::m_left_exoskeleton_port</a></div><div class="ttdeci">std::string m_left_exoskeleton_port</div><div class="ttdoc">Name of the left exoskeleton USB port.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00058">menu_handler.h:58</a></div></div>
-<div class="ttc" id="aclassMenuHandler_html_ab1d5562703dfed280cd59342d6318cad"><div class="ttname"><a href="classMenuHandler.html#ab1d5562703dfed280cd59342d6318cad">MenuHandler::generate_absolute_filename</a></div><div class="ttdeci">std::string generate_absolute_filename(const std::filesystem::path &amp;absolute_path, const std::filesystem::path &amp;folder, const std::string &amp;relative_filename)</div><div class="ttdoc">Generate absolute file name.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00117">menu_handler.cpp:117</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html_a91ff632b00ef3ccde5798548d87fa09f"><div class="ttname"><a href="classMenuHandler.html#a91ff632b00ef3ccde5798548d87fa09f">MenuHandler::m_ports_set</a></div><div class="ttdeci">bool m_ports_set</div><div class="ttdoc">Flag that stores the state of the USB port (whether are set or not).</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00057">menu_handler.h:57</a></div></div>
+<div class="ttc" id="aclassMenuHandler_html_a969cf0558f45804ba0c7cb5794c99262"><div class="ttname"><a href="classMenuHandler.html#a969cf0558f45804ba0c7cb5794c99262">MenuHandler::m_left_exoskeleton_port</a></div><div class="ttdeci">std::string m_left_exoskeleton_port</div><div class="ttdoc">Name of the left exoskeleton USB port.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8h_source.html#l00051">menu_handler.h:51</a></div></div>
 <div class="ttc" id="aclassMenuHandler_html_ada8fa76fd0b56de5451e1f148c6ff25f"><div class="ttname"><a href="classMenuHandler.html#ada8fa76fd0b56de5451e1f148c6ff25f">MenuHandler::MenuHandler</a></div><div class="ttdeci">MenuHandler(igl::opengl::glfw::imgui::ImGuiMenu *menu)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> <a href="menu__handler_8cpp_source.html#l00008">menu_handler.cpp:8</a></div></div>
-<div class="ttc" id="anamespaceports__read_html_a4010593d8d584e9ad1e9deb885e1fb61"><div class="ttname"><a href="namespaceports__read.html#a4010593d8d584e9ad1e9deb885e1fb61">ports_read.ports_file</a></div><div class="ttdeci">ports_file</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00032">ports_read.py:32</a></div></div>
-<div class="ttc" id="anamespaceports__read_html_ae1b9b8d97281f3866a7c3a7f56806c4d"><div class="ttname"><a href="namespaceports__read.html#ae1b9b8d97281f3866a7c3a7f56806c4d">ports_read.absolute_path</a></div><div class="ttdeci">absolute_path</div><div class="ttdef"><b>Definition:</b> <a href="ports__read_8py_source.html#l00026">ports_read.py:26</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
