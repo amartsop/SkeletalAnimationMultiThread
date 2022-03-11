@@ -30,12 +30,10 @@ For more information on the software please see the reference document
 1. Git clone the repository.
 
 2. Install the appropriate dependencies. This can be done manually or with the help of the inculded installation bash script [.installlation.sh](./.installation.sh). If the user wants to install dependencies
-manually, the full list of them is included in the provided .installlation.sh file. To execute the installation file:
+manually, the full list of them is included in the provided [.installlation.sh](./.installation.sh) file. To execute the installation file:
     1.  Login as root and navigate to the directory where the installation file is located.
     2. Run 
     ```
     $ source ./.installation.sh 
     ```
-    > **Warning**: This will install quite a few libraries and packages in your computer. Please make sure that you are aware of the packages that are installed and with the location in which they are installed. Both settings can be changed by editing the ”.installations.sh” file.
-
-
+    > **Warning**: This will install quite a few libraries and packages in your computer. Please make sure that you are aware of the packages that are installed and with the location in which they are installed. Both settings can be changed by editing the [.installlation.sh](./.installation.sh) file.
