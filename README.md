@@ -37,3 +37,19 @@ manually, the full list of them is included in the provided [.installlation.sh](
     $ source ./.installation.sh 
     ```
     > **Warning**: This will install quite a few libraries and packages in your computer. Please make sure that you are aware of the packages that are installed and with the location in which they are installed. Both settings can be changed by editing the [.installlation.sh](./.installation.sh) file.
+
+3.  Build the software: 
+    1. Navigate to the home location of the directory you have cloned.
+    2. Generate a build directory and navigate to it:
+    ```
+    $ mkdir build && cd build 
+    ```
+    3. Execute the CMake file:
+    ```
+    $ cmake ..
+    ```
+    4. Build the executable:
+    ```
+    $ make -j4
+    ```
+    > **Note**: Using the command ”-j4” we ask the compiler to use 4 threads for build the executable. The user can use as many as they prefer. The first time that you build the executable, LibIGL fetches its files from github and builds them as a static library. Since LigIGL is a quite heavy library this will take a while. However, all the following build commands will not build the LibIGL again but only the files that the user has added. If you want to update your build directory we recommend deleting the ”CMakeCache.txt” file in it instead of deleting the whole build directory (as this will mean that the user will have To build LibIGL from scratch).
